@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Failed</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel='stylesheet' href="../bootstrap.css" />
+        <link rel='stylesheet' href='../stylesheets/registfail.css' />
+        <script src='../jquery.js'></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class='row'>
+                <div class='col-md-4 text-success'>
+                    <h3><p>Visitors <sub><cite>Athiti devo bhav </cite></sub></p></h3>
+                </div>
+            </div>
+            <div class="container">
+                <div class="container text-center text-danger">
+                    <h2>Registration Failed</h2>
+                </div>
+                <div class="container">
+                    <div class="text-center lead">You will be redirected to home page after <span id='time'>5</span> seconds</div>
+                </div>
+                <div class="container">
+                        <div class="text-center lead"><a class='text-decoration-none' href="/">click here</a></div>
+                    </div>
+                <div class="container text-left offset-2 text-warning">
+                    <p>@ Either Details You given is not verified !</p>
+                    <p>@ Either E-mail and Phone no already registered !</p>
+                    <p>@ OTP is Wrong !</p>
+                    <p>@ Something went wrong !</p>
+                    <p>@ Check Internet !</p>
+                    <p>@ Server Error !</p>
+                </div>
+            </div>
+        </div>
+        <%- include('../footer'); %>
+        <script src='../javascripts/registfail.js'></script>
+    </body>
+</html>

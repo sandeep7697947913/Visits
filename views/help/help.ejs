@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel='stylesheet' href="../bootstrap.css" />
+        <link rel ='stylesheet' href="../stylesheets/help.css" />
+        <script src='../jquery.js'></script>
+        <script src="../javascripts/vaildate.js"></script>
+        <script src="../javascripts/jquery-ui.js"></script>
+        <title>Help</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class='col-md-4 text-success'>
+                    <h3><p>Visitors <sub><cite>Athiti devo bhav </cite></sub></p></h3>
+                </div>
+            </div>
+            <div class='row'>
+                <ul class="nav nav-pills flex-column offset-1 col-md-2">
+                    <li class="nav-item">
+                        <a id='fp' class=" nav-link active">Forget Password</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id='extra' class="nav-link">Extra</a>
+                    </li>
+                </ul>
+                <div class="col-md-7">
+                    <!-- video -->
+                    <div id='video' class="embed-responsive embed-responsive-21by9">
+                        <video class="embed-responsive-item" controls src="visits.mp4" video>
+                    </div>
+                    <!-- forget from part -->
+                    <div id='forgetform'>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input id='email' class='form-control' type="email" />
+                        </div>
+                        <div id="tempbox">
+                            <div id='fndbtn' class="btn btn-primary disabled">Find My Account</div>
+                            <span id='message' class="text-danger"></span>          
+                        </div>
+                        <div id='forgetform2'>
+                            <div class="form-group">
+                                <label for="otp">OTP</label>
+                                <input id='otp' class='form-control' type="text" />
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input id='password' class='form-control' type="password" />
+                            </div>
+                            <button id='cpsub' disabled class="btn btn-primary disabled">Change Password</button>
+                        </div>
+                        <div id='smessage' class="text-success">* Password Changed Successfully</div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <%- include('../footer'); %>
+        <script src='../javascripts/help.js'></script>
+    </body>
+</html>
+

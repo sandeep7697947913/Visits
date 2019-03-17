@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel='stylesheet' href="../bootstrap.css" />
+        <link rel ='stylesheet' href="../stylesheets/centervisitors.css" />
+        <script src='../jquery.js'></script>
+        <script src="../javascripts/vaildate.js"></script>
+        <title>Center</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class='col-md-4 text-success'>
+                    <h3><p>Visitors <sub><cite>Athiti devo bhav </cite></sub></p></h3>
+                </div>
+                <div class="offset-4 text-info">
+                    <h3><%= center.name %></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a  href='home' class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href='keeper' class="nav-link">Keeper</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class='nav-link active'>Visitors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href='profile' class="nav-link">Pofile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href='others' class="nav-link">Others</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <a id='logout' href='../logout' class="btn btn-danger text-white">Logout</a>
+                </div>
+            </div>
+            <div class="container-fluid dist">
+                <p class="lead col-md-11"># List of all Visitors</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">Purpose</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Come</th>
+                            <th scope="col">Gone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for( visitor of visitors){ %>
+                        <tr>
+                            <td scope='row'> <%= visitor.name %> </td>
+                            <td> <%= visitor.email %> </td>
+                            <td> <%= visitor.contact %> </td>
+                            <td> <%= visitor.purpose %> </td>
+                            <td> <%= visitor.date.toDateString() %> </td>
+                            <td> <%= visitor.come %> </td>
+                            <td>
+                                <% if(visitor.gone===null){ %>
+                                    -- : -- : --
+                                <% } else { %>
+                                    <%= visitor.gone %>
+                                <% } %>
+                            </td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <%- include('../footer'); %>
+    </body>
+</html>

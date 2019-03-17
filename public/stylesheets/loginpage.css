@@ -1,0 +1,29 @@
+body{
+    margin: 50px;
+}
+
+
+fieldset{
+    border: 1px solid #565656;
+   border-radius: 15px;
+}
+
+.dist{
+    margin-top: 50px;
+}
+
+.disabled{
+    cursor: not-allowed;
+}
+
+legend{
+    display: block;
+  width: initial;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal;
+}

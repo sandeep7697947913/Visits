@@ -1,0 +1,16 @@
+.feature{
+  margin:50px;
+  /* background-color: grey; */
+}
+
+/* default */
+body {
+  padding: 50px;
+  background-color: lightgray;
+  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
+}
+
+a {
+  color: #00B7FF;
+}
+

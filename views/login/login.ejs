@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel='stylesheet' href="bootstrap.css" />
+        <link rel ='stylesheet' href="stylesheets/loginpage.css" />
+        <script src='jquery.js'></script>
+        <script src="/javascripts/vaildate.js"></script>
+        <title>Login Page</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class='row'>
+                <div class='col-md-4 text-success'>
+                    <h3><p>Visitors <sub><cite>Athiti devo bhav </cite></sub></p></h3>
+                </div>
+                <div class="offset-4 text-info">
+                    <h3>Login Here</h3>
+                </div>
+            </div>
+            <div class='row dist'>
+            <form action='center/centerlogin.do' method="POST" class='container col-md-4'>
+                <fieldset class="col-md-12 shadow">
+                    <legend>Center Login</legend>
+                    <div class="form-row form-group">
+                        <label for='email'>E-mail</label>
+                        <input id='email1' class='form-control' name='email' type="email" />
+                    </div>
+                    <div class="form-row form-group">
+                        <label for='password'>Password</label>
+                        <input id='pass1' class='form-control' name='password' type="password" />
+                    </div>
+                    <div class="form-row form-group">
+                        <input id="sub1" disabled class="disabled btn btn-primary form-control" type="submit" value="Submit"/>
+                    </div>
+                </fieldset>
+            </form>
+            <form action="keeper/keeperlogin.do" method="POST" class="container col-md-4">
+                    <fieldset class="col-md-12 shadow">
+                        <legend>Keeper Login</legend>
+                        <div class="form-row form-group">
+                            <label for='keepuni'>Unique Id</label>
+                            <input id='keepuni' class='form-control' name='keepuni' type="text" />
+                        </div>
+                        <div class="form-row form-group">
+                            <label for='password'>Password</label>
+                            <input id='pass2' class='form-control' name='password' type="password" />
+                        </div>
+                        <div class="form-row form-group">
+                            <input id="sub2" class="btn btn-primary form-control disabled" disabled type="submit" value="Submit"/>
+                        </div>
+                    </fieldset>
+            </form>
+            </div>
+        </div>
+        <%- include('../footer'); %>
+        <script src='javascripts/loginpage.js'></script>
+    </body>
+</html>

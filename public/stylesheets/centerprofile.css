@@ -1,0 +1,19 @@
+body{
+    margin: 50px;
+}
+
+.dist{
+    margin-top: 20px;
+}
+
+#cpform{
+    display: none;
+}
+
+.disabled{
+    cursor: not-allowed;
+}
+
+#notice{
+    display: none;
+}

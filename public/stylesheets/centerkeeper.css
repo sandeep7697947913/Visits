@@ -1,0 +1,16 @@
+body{
+    margin: 50px;
+}
+
+
+.box{
+    margin-top: 20px;
+}
+
+input.disabled{
+    cursor: not-allowed;
+}
+
+#addkeepform,#changepassform{
+    display: none;
+}

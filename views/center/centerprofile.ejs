@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel='stylesheet' href="../bootstrap.css" />
+        <link rel ='stylesheet' href="../stylesheets/centerprofile.css" />
+        <script src='../jquery.js'></script>
+        <script src="../javascripts/vaildate.js"></script>
+        <script src="../javascripts/jquery-ui.js"></script>
+        <title>Center</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class='col-md-4 text-success'>
+                    <h3><p>Visitors <sub><cite>Athiti devo bhav </cite></sub></p></h3>
+                </div>
+                <div class="offset-4 text-info">
+                    <h3><%= center.name %></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a  href='home' class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href='keeper' class="nav-link">Keeper</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href='visitors' class='nav-link'>Visitors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active">Pofile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href='others' class="nav-link">Others</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <a id='logout' href='../logout' class="btn btn-danger text-white">Logout</a>
+                </div>
+            </div>
+            <div class="container-fluid dist">
+                <div class="row">
+                    <div class="col-md-2">
+                        <ul class="nav nav-pills flex-column">
+                            <li class="nav-item">
+                                <a id='dtfbtn' class='nav-link active'>Details</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id='cpbtn' class="nav-link">Change Password</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5">
+                        <div id='detailform'>
+                            <div class="form-group">
+                                <label for='name'>Name</label>
+                                <input id='name' class='form-control' type="text" readonly value="<%= center.name %>" />
+                            </div>
+                            <div class="form-group">
+                                <label for='centertype'>Center is </label>
+                                <input id='centertype' class='form-control' type="text" readonly value="<%= center.center_type %>" />
+                            </div>
+                            <div class="form-group">
+                                <label for='email'>E-mail</label>
+                                <input id='email' class='form-control' readonly type="text" readonly value="<%= center.email %>" />
+                            </div>
+                            <div class="form-group">
+                                <label for='address'>Address</label>
+                                <input id="address" class='form-control' readonly type="text" readonly value="<%= center.address %>" />
+                            </div>
+                            <div class="form-group">
+                                <label for='citystate'>City / State</label>
+                                <input id="citystate" class='form-control' readonly type="text" readonly value="<%= center.city_name %> , <%= center.state_name %>" />
+                            </div>
+                        </div>
+                        <div id='cpform'>
+                            <div class="form-group">
+                                <label for="oldpass">Old Password</label>
+                                <input class='form-control' type="password" id="oldpass"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="newpass">New Password</label>
+                                <input class='form-control' type="password" id="newpass"/>
+                            </div>
+                            <input id='cpsubbtn' disabled class="disabled btn btn-outline-primary" type="button" value="Change Password" />
+                            <p id='notice' class="lead"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('../footer'); %>
+        <script src='../javascripts/centerprofile.js'></script>
+    </body>
+</html>

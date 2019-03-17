@@ -1,0 +1,17 @@
+body{
+    margin:50px;
+}
+
+#dist{
+    margin-top: 25px;
+    margin-bottom:150px;
+}
+
+input[disabled].disabled{
+    cursor: not-allowed;
+}
+
+#updatemessage{
+    margin-top: 25px;
+    display: none;
+}

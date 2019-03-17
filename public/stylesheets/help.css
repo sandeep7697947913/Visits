@@ -1,0 +1,16 @@
+body{
+    margin: 50px;
+}
+
+#video{
+    display: none;
+}
+
+.disabled{
+    cursor: not-allowed;
+}
+
+
+#forgetform2,#smessage,#message{
+    display: none;
+}

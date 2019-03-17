@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel='stylesheet' href="bootstrap.css" />
+        <link rel='stylesheet' href='/stylesheets/regist.css' />
+        <script src='jquery.js'></script>
+        <script type="text/javascript" src="/javascripts/vaildate.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class='row'>
+                <div class='col-md-4 text-success'>
+                    <h3><p>Visitors <sub><cite>Athiti devo bhav </cite></sub></p></h3>
+                </div>
+                <div class="offset-4 text-info">
+                    <h3>Register your Center</h3>
+                </div>
+            </div>
+            <div class="row offset-1">
+                <h2 class='display-6'>Regitstration Form</h2>
+            </div>
+            <form action='registpage/registerCenter.do' method="POST" class='offset-1 col-9'>
+                <div id='form1'>
+                    <div class='form-group form-row'>
+                        <label for="cn">Center Name</label>
+                        <input id='cn' class='form-control' placeholder="Your Center name" name="centername" type='text'>
+                    </div>
+                    <div class="form-row">
+                        <div class='form-group col-5'>
+                            <label for="email">E-mail</label>
+                            <input id='email' class='form-control' placeholder="abc@gmail.com" name="email" type='email'>
+                        </div>
+                        <div class='form-group col-5'>
+                            <label for="pass">Password</label>
+                            <input id='pass' class='form-control' placeholder="password" name="pass" type='password'>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for='states'>State</label>
+                            <select id='states' name='stateId' class="form-control">
+                                <option value="0"> - select - </option>
+                                <% for(let state of states){ %>
+                                    <option value="<%- state.state_id %>"><%- state.state_name %></option>
+                                <% } %> 
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for='cities' >City</label>
+                            <select id='cities'name='cityId' class="form-control">
+                                <option value="0">  -select - </option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for='center type'>Center Type</label>
+                            <select id='centerTypeId' name='centerTypeId' class="form-control">
+                                <option value="0"> - select - </option>
+                                <% for(let center of centerTypes){ %>
+                                    <option value="<%- center.center_type_id %>"><%- center.center_type %></option>
+                                <% } %>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-3">
+                            <label for="tel">Phone No</label>
+                            <input class='form-control' id='tel' name='tel' type='tel' />
+                        </div>
+                        <div class="form-group col-sm-9">
+                            <label for="addr">Address</label>
+                            <input class='form-control' id='addr' name='addr' type='text' />
+                        </div>
+                    </div>
+                    <div id='prbtn' class="form-row disabled btn-primary btn">
+                    Proceed
+                    </div>
+                </div>
+                <div id='form2'>
+                    <div class="form-group row">
+                        <label for="otp" class="col-sm-2 col-form-label text-right">Verify OTP :- </label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="otp" name='otp' placeholder="OTP" />
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="submit" id='sub' class='btn btn-primary' disabled value="Submit" />
+                        </div>
+                    </div>
+                    <div class="row offset-1">
+                        <p class="text-danger">* One Time Password (OTP) is seneded to your given E-mail</p>
+                    </div>
+                    <div class="row offset-1">
+                        <p class="text-danger">* Verify to complete the Regitstration</p>
+                    </div>
+                    <div class="row offset-1">
+                        <p class="text-danger">* OTP is valid for 30 minutes</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <%- include('../footer'); %>
+        <script src='javascripts/regist.js'></script>
+    </body>
+</html>
